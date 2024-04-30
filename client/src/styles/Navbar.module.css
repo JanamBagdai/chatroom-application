@@ -1,0 +1,90 @@
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #1E3877;
+    padding: 1rem;
+    width: 100%;
+}
+
+
+.navbarList {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbarItem {
+    margin-right: 1rem;
+}
+
+.navbarLink {
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.navbarLink:hover {
+    text-decoration: underline;
+}
+
+
+.navbtn{
+    padding: 10px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1.8rem;
+}
+
+.labchange{
+    position: absolute;
+     top: 1.5em;
+    right: 0.5em
+}
+
+/* Media query for screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+
+    header .navbtn{
+        visibility: visible;
+        opacity:1;
+        margin-left: auto;
+    }
+
+    header .navbar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        background-color: #1E3877;
+        transition: 0.1s;
+        transform: translateY(-100vh);
+        z-index: 1200;
+    }
+
+    header .responsivenav{
+        transform: none;
+    }
+
+    nav .navclosebtn{
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .labchange{
+        display: none;
+    }
+
+}
